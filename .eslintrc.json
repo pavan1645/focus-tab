@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.js"]
+    }
+  ],
+  "rules": {
+    "semi": [2, "always"],
+    "indent": [2, 2],
+    "comma-dangle": [2, "always-multiline"],
+    "quotes": [2, "single"]
+  }
+}
