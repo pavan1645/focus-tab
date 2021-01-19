@@ -25,6 +25,7 @@
     "semi": [2, "always"],
     "indent": [2, 2],
     "comma-dangle": [2, "always-multiline"],
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "eol-last": [2, "always"]
   }
 }
