@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import Timer from '../Timer/Timer';
 
 const styles = {
   timeWrapper: {
     'height': '50%',
+    'marginTop': 'calc((7em * 1.15) / 2)',
     'display': 'flex',
     'alignItems': 'flex-end',
     'justifyContent': 'center',
   },
   timeStyle: {
-    'transform': 'translateY(50%)',
     'margin': '0',
-    'color': 'white',
     'fontSize': '7em',
-    'textShadow': '0px 5px 5px black',
   },
 };
 
