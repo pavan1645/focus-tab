@@ -22,10 +22,10 @@
     }
   ],
   "rules": {
-    "semi": [2, "always"],
-    "indent": [2, 2],
-    "comma-dangle": [2, "always-multiline"],
-    "quotes": [2, "single"],
-    "eol-last": [2, "always"]
+    "semi": [1, "always"],
+    "indent": [1, 2],
+    "comma-dangle": [1, "always-multiline"],
+    "quotes": [1, "single"],
+    "eol-last": [1, "always"]
   }
 }
