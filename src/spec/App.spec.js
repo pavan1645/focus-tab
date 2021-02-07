@@ -1,9 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, getNodeText } from '@testing-library/react';
 import App from '../App';
 
-test('renders hello world', () => {
+test('renders current time', () => {
   render(<App />);
-  const helloWorldElement = screen.getByText(/hello world/i);
-  expect(helloWorldElement).toBeInTheDocument();
+
+  const timeEl = document.querySelector('h1')
+  expect(timeEl).toBeInTheDocument();
+  
+  const time = getNodeText(timeEl);
+  expect(time).toMatch(/\d{2}:\d{2} (AM|PM)/);
 });

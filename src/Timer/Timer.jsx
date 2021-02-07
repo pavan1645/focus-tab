@@ -19,8 +19,8 @@ const defaultTimeRemaining = '00:00:00';
 
 export default function Timer() {
   const { timerWrapper } = useStyles();
-  const [timerStarted, settimerStarted] = useState(false);
-  const [timeRemaining, settimeRemaining] = useState(defaultTimeRemaining);
+  const [timerStarted, setTimerStarted] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(defaultTimeRemaining);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +35,7 @@ export default function Timer() {
         const minutes = Math.floor((msRemaining / (1000 * 60)) % 60);
         const hours = Math.floor((msRemaining / (1000 * 60 * 60)) % 60);
 
-        settimeRemaining(`${getPadded(hours)}:${getPadded(minutes)}:${getPadded(seconds)}`);
+        setTimeRemaining(`${getPadded(hours)}:${getPadded(minutes)}:${getPadded(seconds)}`);
       }
     }, 1000);
     
@@ -71,13 +71,13 @@ export default function Timer() {
   const startTimer = () => {
     const timerLimit = 30 * 60 * 1000;
     localStorage.setItem(TIMER_KEY, Date.now() + timerLimit);
-    settimerStarted(true);
+    setTimerStarted(true);
   };
   
   const stopTimer = () => {
     localStorage.removeItem(TIMER_KEY);
-    settimeRemaining(defaultTimeRemaining);
-    settimerStarted(false);
+    setTimeRemaining(defaultTimeRemaining);
+    setTimerStarted(false);
   };
 
   const getPadded = (n) => {
