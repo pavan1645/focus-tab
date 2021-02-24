@@ -22,8 +22,6 @@ const theme = createMuiTheme({
   },
 });
 
-const IMAGE_URL = 'https://momentum.photos/img/d20ccc21-6d5a-4974-b60f-8d5fa513ad8e.jpg?momo_cache_bg_uuid=1c2056f8-3a6b-4ada-8da9-10ec31e4f1f5';
-
 const styles = {
   container: {
     display: 'flex',
@@ -39,7 +37,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <BackgroundImage imageUrl={IMAGE_URL} />
+      <BackgroundImage />
       <div style={container}>
         <div style={containerItem}></div>
         <div style={containerItem}>
